@@ -1,6 +1,7 @@
 'use client'
 import { useParams } from 'next/navigation';
 import React, { useEffect, useState } from 'react'
+import Image from 'next/image';
 
 const SingleUser = (props: { params: { id: string } }) => {
     const [data, setData] = useState<any>(null);
@@ -80,7 +81,7 @@ const SingleUser = (props: { params: { id: string } }) => {
                             {/* Right Section - Image */}
 
                             <div className=' lg:w-auto w-full flex items-center justify-center'>
-                            <img
+                            <Image
                                 alt="ecommerce"
                                 className="w-auto  lg:h-auto h-full object-cove object-center rounded"
                                 src={data.thumbnail}

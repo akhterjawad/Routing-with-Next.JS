@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
 import Footer from '../components/Footer';
+import Image from 'next/image';
 
 interface Users {
   name: string;
@@ -30,7 +31,7 @@ const Product = () => {
         {data ? data.products.map(item => (
           <div key={item.id} className="w-[300px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 h-[25.3rem]">
             <span className=''>
-              <img
+              <Image
                 className="rounded-t-lg w-[12rem] h-[12rem] mt-2 mx-auto object-contain"
                 src={item.thumbnail}
                 alt="no-img"
