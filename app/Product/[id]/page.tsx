@@ -78,11 +78,14 @@ const SingleUser = (props: { params: { id: string } }) => {
                                 </div>
                             </div>
                             {/* Right Section - Image */}
+
+                            <div className=' lg:w-auto w-full flex items-center justify-center'>
                             <img
                                 alt="ecommerce"
-                                className="lg:w-auto w-full lg:h-auto  object-cove object-center rounded"
+                                className="w-auto  lg:h-auto h-full object-cove object-center rounded"
                                 src={data.thumbnail}
-                            />
+                                />
+                                </div>
                         </div>
                     </div>
                 </section>

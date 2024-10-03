@@ -39,7 +39,7 @@ const Product = () => {
             <div className="p-5">
               <span>
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  {item.category}
+                  {item.brand}
                 </h5>
               </span>
               <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
