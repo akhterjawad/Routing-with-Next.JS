@@ -11,7 +11,7 @@ interface Users {
 }
 
 const Product = () => {
-  
+
   const [data, setData] = useState<{ products: Users[] } | null>(null);
   useEffect(() => {
     fetch('https://dummyjson.com/products')
@@ -34,8 +34,11 @@ const Product = () => {
               <Image
                 className="rounded-t-lg w-[12rem] h-[12rem] mt-2 mx-auto object-contain"
                 src={item.thumbnail}
-                alt="no-img"
+                alt={item.title}
+                width={300}
+                height={300}
               />
+
             </span>
             <div className="p-5">
               <span>
@@ -47,19 +50,17 @@ const Product = () => {
                 {item.title}
               </p>
               <p className='font-semibold mb-4'>Price: {item.price}</p>
-              <span
-                className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                // onClick={() => sandcard(item.id)}
-              >
-                <Link href={`product/${item.id}`}>More Details</Link>
 
-                <svg
-                  className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 14 10"
-                >
+              <Link href={`product/${item.id}`}><span
+                className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              // onClick={() => sandcard(item.id)}
+              >More Details<svg
+                className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10"
+              >
                   <path
                     stroke="currentColor"
                     strokeLinecap="round"
@@ -68,7 +69,7 @@ const Product = () => {
                     d="M1 5h12m0 0L9 1m4 4L9 9"
                   />
                 </svg>
-              </span>
+              </span></Link>
             </div>
           </div>
         )) : <span className="loading loading-spinner text-info w-28 mt-52"></span>}
