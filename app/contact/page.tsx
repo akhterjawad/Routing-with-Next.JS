@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <>
     {/* <button className="btn btn-primary"><Link href={'/'}>Home</Link></button> */}
-    <div className="font-bold text-[4rem] text-center mt-48">Contact</div>
+    <h1 className="font-bold text-[4rem] text-center mt-56">Contact</h1>
     </>
   )
 }
