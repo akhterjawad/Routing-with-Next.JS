@@ -3,16 +3,16 @@ import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
 import Footer from '../components/Footer';
 import Image from 'next/image';
-
-interface Users {
-  name: string;
-  username: string;
-  id: number
+interface Product {
+  id: number;
+  title: string;
+  brand: string;
+  price: number;
+  thumbnail: string;
 }
-
 const Product = () => {
 
-  const [data, setData] = useState<{ products: Users[] } | null>(null);
+  const [data, setData] = useState<{ products: Product[] } | null>(null);
   useEffect(() => {
     fetch('https://dummyjson.com/products')
       .then(response => response.json()) // Convert the response to JSON
