@@ -1,7 +1,7 @@
 "use client"
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
-import Footer from '../components/Footer';
+import Footer from '../components/footer';
 import Image from 'next/image';
 interface Product {
   id: number;
