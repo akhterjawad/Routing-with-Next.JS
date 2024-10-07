@@ -1,8 +1,8 @@
 "use client"
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
-import Footer from '@/app/components/footer';
 import Image from 'next/image';
+import Footer from '../components/footer';
 interface Product {
   id: number;
   title: string;
