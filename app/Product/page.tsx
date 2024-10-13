@@ -39,7 +39,6 @@ const Product = () => {
                 width={300}
                 height={300}
               />
-
             </span>
             <div className="p-5">
               <span>
