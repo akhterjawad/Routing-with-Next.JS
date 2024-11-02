@@ -9,7 +9,7 @@ const SingleUser = () => {
     const { id } = useParams();
 
     useEffect(() => {
-        fetch(`https://dummyjson.com/products/${id}`)
+        fetch(`https://dummyjson.com/product/${id}`)
             .then(res => res.json())
             .then((res) => {
                 console.log(res)
