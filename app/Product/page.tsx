@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image';
-import Footer from '../components/Footer';
+import Footer from '../Components/Footer';
 interface Product {
   id: number;
   title: string;
