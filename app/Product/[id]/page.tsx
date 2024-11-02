@@ -3,6 +3,7 @@ import { useParams } from 'next/navigation';
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image';
 
+
 const SingleUser = () => {
     const [data, setData] = useState<any>(null);
     const { id } = useParams();
