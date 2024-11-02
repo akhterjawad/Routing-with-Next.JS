@@ -38,6 +38,7 @@ const Product = () => {
                 alt={item.title}
                 width={300}
                 height={300}
+                
               />
             </span>
             <div className="p-5">
